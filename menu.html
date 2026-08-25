@@ -8,6 +8,49 @@
           content="Le prelibatezze della Fontana del Borgo: piatti tipici della tradizione valsinnese, pasta fatta in casa, salumi e formaggi locali, specialità come U’RRAGON." />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Layout nav con logo a sinistra e a destra ai bordi della pagina */
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.9rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo-link {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: inline-flex;
+            align-items: center;
+            gap: 2.0rem;
+        }
+
+        /* Mobile header: logo sinistra, titolo e hamburger */
+        .mobile-nav-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .mobile-nav-title {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,18 +58,42 @@
     <!-- NAV DESKTOP -->
     <nav class="main-nav">
         <div class="nav-inner">
-            <a href="index.html">Home Page</a>
-            <a href="menu.html" class="active">Le nostre prelibatezze</a>
-            <a href="galleria.html">Galleria</a>
-            <a href="chi-siamo.html">Chi Siamo</a>
-            <a href="contatti.html">Contatti</a>
+            <!-- Logo sinistra -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
+            <!-- Menu voci -->
+            <div class="nav-menu">
+                <a href="index.html">Home Page</a>
+                <a href="menu.html" class="active">Le nostre prelibatezze</a>
+                <a href="galleria.html">Galleria</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+
+            <!-- Logo destra -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
         </div>
     </nav>
 
     <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
+            <!-- Logo sinistra mobile -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
             <div class="mobile-nav-title">Menu</div>
+
+            <!-- Logo destra mobile -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -72,41 +139,32 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
-            <!-- Colonna sinistra -->
             <div class="footer-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;">
-                <!-- <button type="button" class="back-to-top" id="backToTopBtn">
-                    Torna su
-                </button> -->
                 <div class="footer-text">
                     © La Fontana del Borgo – Locanda Medioevale.
                     Seguici sui nostri canali social.
                 </div>
             </div>
 
-            <!-- Colonna centrale: social -->
             <div class="footer-social">
-                <!-- Facebook -->
                 <a href="https://www.facebook.com/p/La-Fontana-del-Borgo-100054309739099/?locale=it_IT"
                    target="_blank" rel="noopener noreferrer" aria-label="Facebook"
                    class="fb-link">
                     <img src="img/facebook.png" alt="Facebook" class="logo-fb" />
                 </a>
 
-                <!-- Instagram -->
                 <a href="https://www.instagram.com/lafontanadelborgo/"
                    target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                    class="ig-link">
                     <img src="img/instagram.png" alt="Instagram" class="logo-ig" />
                 </a>
 
-                <!-- TripAdvisor -->
                 <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana_del_Borgo-Valsinni_Province_of_Matera_Basilicata.html"
                    target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"
                    class="ta-link">
                     <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta" />
                 </a>
 
-                <!-- Maps -->
                 <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x0:0x0!4m6!3m5!1s0x13388e105d5811a7:0x9c93e6175a1fd3db!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11c55k0nj9"
                    target="_blank" rel="noopener noreferrer" aria-label="Maps"
                    class="gm-link">
@@ -114,7 +172,6 @@
                 </a>
             </div>
 
-            <!-- Colonna destra: switch lingua -->
             <div class="footer-right" style="font-size: 0.85rem; text-align: right;">
                 Lingua:
                 <span style="font-weight: 600; text-decoration: underline;">IT</span>
@@ -130,18 +187,10 @@
 <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu   = document.getElementById('mobileMenu');
-    const backToTopBtn = document.getElementById('backToTopBtn');
 
     hamburgerBtn?.addEventListener('click', function () {
         const isVisible = mobileMenu.style.display === 'flex';
         mobileMenu.style.display = isVisible ? 'none' : 'flex';
-    });
-
-    backToTopBtn?.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     });
 </script>
 </body>

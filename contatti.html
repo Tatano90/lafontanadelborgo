@@ -8,6 +8,47 @@
           content="Contatta la Fontana del Borgo per informazioni e prenotazioni: telefono, email, indirizzo a Valsinni e dettagli fiscali della locanda medioevale." />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.9rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo-link {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: inline-flex;
+            align-items: center;
+            gap: 2.0rem;
+        }
+
+        .mobile-nav-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .mobile-nav-title {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,18 +56,37 @@
     <!-- NAV DESKTOP -->
     <nav class="main-nav">
         <div class="nav-inner">
-            <a href="index.html">Home Page</a>
-            <a href="menu.html">Le nostre prelibatezze</a>
-            <a href="galleria.html">Galleria</a>
-            <a href="chi-siamo.html">Chi Siamo</a>
-            <a href="contatti.html" class="active">Contatti</a>
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html">Home Page</a>
+                <a href="menu.html">Le nostre prelibatezze</a>
+                <a href="galleria.html">Galleria</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="contatti.html" class="active">Contatti</a>
+            </div>
+
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
         </div>
     </nav>
 
     <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
             <div class="mobile-nav-title">Menu</div>
+
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -58,17 +118,13 @@
                 Per informazioni e prenotazioni puoi contattarci ai seguenti recapiti:
             </p>
             <p>
-                Telefono: <strong>+39 0835 817076 - +39 342 1216027</strong>
+                Telefono: <strong>(+39) 0835 817076 - (+39) 342 1216027</strong>
             </p>
             <p>
                 Email: <strong>info@lafontanadelborgo.it</strong>
             </p>
             <p>
                 Indirizzo: <strong>Via Mentana 18/20 - Piazzetta Accannata - 75029 - VALSINNI (MT) - Italy</strong>
-                <br />
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    Apri in Google Maps
-                </a>
             </p>
             <p>
                 P.IVA: <strong>01296730771</strong>
@@ -80,9 +136,6 @@
     <footer class="footer">
         <div class="footer-inner" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
             <div class="footer-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;">
-                <!-- <button type="button" class="back-to-top" id="backToTopBtn">
-                    Torna su
-                </button> -->
                 <div class="footer-text">
                     © La Fontana del Borgo – Locanda Medioevale.
                     Seguici sui nostri canali social.
@@ -130,15 +183,10 @@
 <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu   = document.getElementById('mobileMenu');
-    const backToTopBtn = document.getElementById('backToTopBtn');
 
     hamburgerBtn?.addEventListener('click', function () {
         const isVisible = mobileMenu.style.display === 'flex';
         mobileMenu.style.display = isVisible ? 'none' : 'flex';
-    });
-
-    backToTopBtn?.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 </body>

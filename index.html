@@ -8,6 +8,49 @@
           content="La Fontana del Borgo è una locanda medioevale nel borgo antico di Valsinni. Cucina tipica valsinnese, atmosfera storica e accoglienza autentica ai piedi del castello dei Morra." />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Layout nav con logo a sinistra e a destra ai bordi della pagina */
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.9rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo-link {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 40px; /* regola questa misura se vuoi il logo più grande/piccolo */
+            width: auto;
+        }
+
+        .nav-menu {
+            display: inline-flex;
+            align-items: center;
+            gap: 2.0rem;
+        }
+
+        /* Mobile header: logo sinistra, titolo e hamburger */
+        .mobile-nav-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .mobile-nav-title {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,18 +58,42 @@
     <!-- NAV DESKTOP -->
     <nav class="main-nav">
         <div class="nav-inner">
-            <a href="index.html" class="active">Home Page</a>
-            <a href="menu.html">Le nostre prelibatezze</a>
-            <a href="galleria.html">Galleria</a>
-            <a href="chi-siamo.html">Chi Siamo</a>
-            <a href="contatti.html">Contatti</a>
+            <!-- Logo sinistra -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
+            <!-- Menu voci, centrato fra i due loghi -->
+            <div class="nav-menu">
+                <a href="index.html" class="active">Home Page</a>
+                <a href="menu.html">Le nostre prelibatezze</a>
+                <a href="galleria.html">Galleria</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+
+            <!-- Logo destra -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
         </div>
     </nav>
 
     <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
+            <!-- Logo sinistra mobile -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
             <div class="mobile-nav-title">Menu</div>
+
+            <!-- Logo destra mobile -->
+            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
+                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            </a>
+
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -68,7 +135,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
-            <!-- Colonna sinistra: Torna su + testo -->
+            <!-- Colonna sinistra: testo -->
             <div class="footer-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;">
                 <!-- <button type="button" class="back-to-top" id="backToTopBtn">
                     Torna su
@@ -103,7 +170,7 @@
                 </a>
 
                 <!-- Maps -->
-                <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x1338abf78bcfcb6d:0x733f3f5e9135fc8!4m6!3m5!1s0x1338abf9d2ed18af:0x71ab57ed6f5b4cb0!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11cjpfd_20?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x0:0x0!4m6!3m5!1s0x13388e105d5811a7:0x9c93e6175a1fd3db!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11c55k0nj9"
                    target="_blank" rel="noopener noreferrer" aria-label="Maps"
                    class="gm-link">
                     <img src="img/maps.png" alt="Maps" class="logo-gm" />
