@@ -8,49 +8,6 @@
           content="La Fontana del Borgo è una locanda medioevale nel borgo antico di Valsinni. Cucina tipica valsinnese, atmosfera storica e accoglienza autentica ai piedi del castello dei Morra." />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-        /* Layout nav con logo a sinistra e a destra ai bordi della pagina */
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0.9rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-logo-link {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .nav-logo {
-            height: 40px; /* regola questa misura se vuoi il logo più grande/piccolo */
-            width: auto;
-        }
-
-        .nav-menu {
-            display: inline-flex;
-            align-items: center;
-            gap: 2.0rem;
-        }
-
-        /* Mobile header: logo sinistra, titolo e hamburger */
-        .mobile-nav-header {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0.6rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .mobile-nav-title {
-            flex: 1;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -63,7 +20,7 @@
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
 
-            <!-- Menu voci, centrato fra i due loghi -->
+            <!-- Menu -->
             <div class="nav-menu">
                 <a href="index.html" class="active">Home Page</a>
                 <a href="menu.html">Le nostre prelibatezze</a>
@@ -82,14 +39,12 @@
     <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
-            <!-- Logo sinistra mobile -->
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
 
             <div class="mobile-nav-title">Menu</div>
 
-            <!-- Logo destra mobile -->
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
@@ -134,42 +89,33 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-inner" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
-            <!-- Colonna sinistra: testo -->
-            <div class="footer-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;">
-                <!-- <button type="button" class="back-to-top" id="backToTopBtn">
-                    Torna su
-                </button> -->
+        <div class="footer-inner">
+            <div class="footer-left">
                 <div class="footer-text">
                     © La Fontana del Borgo – Locanda Medioevale.
                     Seguici sui nostri canali social.
                 </div>
             </div>
 
-            <!-- Colonna centrale: social -->
             <div class="footer-social">
-                <!-- Facebook -->
                 <a href="https://www.facebook.com/p/La-Fontana-del-Borgo-100054309739099/?locale=it_IT"
                    target="_blank" rel="noopener noreferrer" aria-label="Facebook"
                    class="fb-link">
                     <img src="img/facebook.png" alt="Facebook" class="logo-fb" />
                 </a>
 
-                <!-- Instagram -->
                 <a href="https://www.instagram.com/lafontanadelborgo/"
                    target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                    class="ig-link">
                     <img src="img/instagram.png" alt="Instagram" class="logo-ig" />
                 </a>
 
-                <!-- TripAdvisor -->
                 <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana_del_Borgo-Valsinni_Province_of_Matera_Basilicata.html"
                    target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"
                    class="ta-link">
                     <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta" />
                 </a>
 
-                <!-- Maps -->
                 <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x0:0x0!4m6!3m5!1s0x13388e105d5811a7:0x9c93e6175a1fd3db!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11c55k0nj9"
                    target="_blank" rel="noopener noreferrer" aria-label="Maps"
                    class="gm-link">
@@ -177,12 +123,10 @@
                 </a>
             </div>
 
-            <!-- Colonna destra: switch lingua -->
-            <div class="footer-right" style="font-size: 0.85rem; text-align: right;">
+            <div class="footer-right">
                 Lingua:
                 <span style="font-weight: 600; text-decoration: underline;">IT</span>
                 <span> | </span>
-                <!-- EN fittizio, non funzionante -->
                 <a href="#" aria-disabled="true" style="opacity: 0.7; pointer-events: none;">
                     EN (coming soon)
                 </a>
@@ -202,12 +146,9 @@
         mobileMenu.style.display = isVisible ? 'none' : 'flex';
     });
 
-    // Torna su
+    // Torna su (se riattivi il pulsante nel footer)
     backToTopBtn?.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 </body>
