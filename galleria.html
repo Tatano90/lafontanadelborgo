@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <title>La Fontana del Borgo - Galleria fotografica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+          content="Galleria fotografica della Fontana del Borgo: ambienti della locanda medioevale, piatti tipici valsinnesi e dettagli del borgo antico di Valsinni." />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page-overlay">
+    <!-- NAV DESKTOP -->
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <a href="index.html">Home Page</a>
+            <a href="menu.html">Le nostre prelibatezze</a>
+            <a href="galleria.html" class="active">Galleria</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- NAV MOBILE -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-title">Menu</div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        <div class="mobile-nav-menu" id="mobileMenu">
+            <a href="index.html">Home Page</a>
+            <a href="menu.html">Le nostre prelibatezze</a>
+            <a href="galleria.html" class="active">Galleria</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="logo.png" alt="La Fontana del Borgo" class="hero-logo" />
+        </div>
+    </header>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <main>
+        <section class="gallery-box">
+            <h2>Galleria</h2>
+            <p style="margin-bottom: 1rem;">
+                Alcune immagini degli ambienti e delle nostre specialità.
+            </p>
+
+            <div class="gallery-viewer">
+                <img src="box_img/foto1.jpg"
+                     alt="La Fontana del Borgo - immagine 1"
+                     class="gallery-image"
+                     id="galleryImage">
+            </div>
+
+            <div class="gallery-controls">
+                <button class="gallery-button" id="prevBtn">« Precedente</button>
+                <span class="gallery-counter" id="galleryCounter">1 / 3</span>
+                <button class="gallery-button" id="nextBtn">Successiva »</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
+            <div class="footer-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;">
+                <!-- <button type="button" class="back-to-top" id="backToTopBtn">
+                    Torna su
+                </button> -->
+                <div class="footer-text">
+                    © La Fontana del Borgo – Locanda Medioevale.
+                    Seguici sui nostri canali social.
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/p/La-Fontana-del-Borgo-100054309739099/?locale=it_IT"
+                   target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                   class="fb-link">
+                    <img src="img/facebook.png" alt="Facebook" class="logo-fb" />
+                </a>
+
+                <a href="https://www.instagram.com/lafontanadelborgo/"
+                   target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                   class="ig-link">
+                    <img src="img/instagram.png" alt="Instagram" class="logo-ig" />
+                </a>
+
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana_del_Borgo-Valsinni_Province_of_Matera_Basilicata.html"
+                   target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"
+                   class="ta-link">
+                    <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta" />
+                </a>
+
+                <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x0:0x0!4m6!3m5!1s0x13388e105d5811a7:0x9c93e6175a1fd3db!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11c55k0nj9"
+                   target="_blank" rel="noopener noreferrer" aria-label="Maps"
+                   class="gm-link">
+                    <img src="img/maps.png" alt="Maps" class="logo-gm" />
+                </a>
+            </div>
+
+            <div class="footer-right" style="font-size: 0.85rem; text-align: right;">
+                Lingua:
+                <span style="font-weight: 600; text-decoration: underline;">IT</span>
+                <span> | </span>
+                <a href="#" aria-disabled="true" style="opacity: 0.7; pointer-events: none;">
+                    EN (coming soon)
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const hamburgerBtn  = document.getElementById('hamburgerBtn');
+    const mobileMenu    = document.getElementById('mobileMenu');
+    const backToTopBtn  = document.getElementById('backToTopBtn');
+    const galleryImage  = document.getElementById('galleryImage');
+    const galleryCounter= document.getElementById('galleryCounter');
+    const prevBtn       = document.getElementById('prevBtn');
+    const nextBtn       = document.getElementById('nextBtn');
+
+    hamburgerBtn?.addEventListener('click', function () {
+        const isVisible = mobileMenu.style.display === 'flex';
+        mobileMenu.style.display = isVisible ? 'none' : 'flex';
+    });
+
+    backToTopBtn?.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const images = [
+        'box_img/foto1.jpg',
+        'box_img/foto2.jpg',
+        'box_img/foto3.jpg',
+        'box_img/foto4.jpg',
+        'box_img/foto5.jpg'
+    ];
+
+    let currentIndex = 0;
+
+    function updateGallery() {
+        galleryImage.src  = images[currentIndex];
+        galleryImage.alt  = 'La Fontana del Borgo - immagine ' + (currentIndex + 1);
+        galleryCounter.textContent = (currentIndex + 1) + ' / ' + images.length;
+    }
+
+    prevBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateGallery();
+    });
+
+    updateGallery();
+</script>
+</body>
+</html>

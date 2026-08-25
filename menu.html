@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <title>La Fontana del Borgo - Cucina tipica valsinnese</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+          content="Le prelibatezze della Fontana del Borgo: piatti tipici della tradizione valsinnese, pasta fatta in casa, salumi e formaggi locali, specialità come U’RRAGON." />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="page-overlay">
+    <!-- NAV DESKTOP -->
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <a href="index.html">Home Page</a>
+            <a href="menu.html" class="active">Le nostre prelibatezze</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- NAV MOBILE -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-title">Menu</div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        <div class="mobile-nav-menu" id="mobileMenu">
+            <a href="index.html">Home Page</a>
+            <a href="menu.html" class="active">Le nostre prelibatezze</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="logo.png" alt="La Fontana del Borgo" class="hero-logo" />
+        </div>
+    </header>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <main>
+        <section class="section-box">
+            <h2>Le nostre prelibatezze</h2>
+            <p>
+                La nostra cucina propone piatti tipici della tradizione valsinnese, con pasta fatta in casa,
+                salumi e formaggi del territorio e ricette che affondano le radici nella storia locale.
+            </p>
+            <p>
+                Selezioniamo materie prime di qualità, privilegiando produttori locali e stagionalità,
+                per offrire piatti autentici e dal gusto deciso.
+            </p>
+            <p>
+                Tra le specialità spicca “U’RRAGON”, piatto simbolo della locanda, che racconta una
+                storia antica fatta di rituali, convivialità e sapori di montagna.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
+            <!-- Colonna sinistra -->
+            <div class="footer-left" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem;">
+                <!-- <button type="button" class="back-to-top" id="backToTopBtn">
+                    Torna su
+                </button> -->
+                <div class="footer-text">
+                    © La Fontana del Borgo – Locanda Medioevale.
+                    Seguici sui nostri canali social.
+                </div>
+            </div>
+
+            <!-- Colonna centrale: social -->
+            <div class="footer-social">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/p/La-Fontana-del-Borgo-100054309739099/?locale=it_IT"
+                   target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                   class="fb-link">
+                    <img src="img/facebook.png" alt="Facebook" class="logo-fb" />
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/lafontanadelborgo/"
+                   target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                   class="ig-link">
+                    <img src="img/instagram.png" alt="Instagram" class="logo-ig" />
+                </a>
+
+                <!-- TripAdvisor -->
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana_del_Borgo-Valsinni_Province_of_Matera_Basilicata.html"
+                   target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"
+                   class="ta-link">
+                    <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta" />
+                </a>
+
+                <!-- Maps -->
+                <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x0:0x0!4m6!3m5!1s0x13388e105d5811a7:0x9c93e6175a1fd3db!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11c55k0nj9"
+                   target="_blank" rel="noopener noreferrer" aria-label="Maps"
+                   class="gm-link">
+                    <img src="img/maps.png" alt="Maps" class="logo-gm" />
+                </a>
+            </div>
+
+            <!-- Colonna destra: switch lingua -->
+            <div class="footer-right" style="font-size: 0.85rem; text-align: right;">
+                Lingua:
+                <span style="font-weight: 600; text-decoration: underline;">IT</span>
+                <span> | </span>
+                <a href="#" aria-disabled="true" style="opacity: 0.7; pointer-events: none;">
+                    EN (coming soon)
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    hamburgerBtn?.addEventListener('click', function () {
+        const isVisible = mobileMenu.style.display === 'flex';
+        mobileMenu.style.display = isVisible ? 'none' : 'flex';
+    });
+
+    backToTopBtn?.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>
