@@ -12,15 +12,14 @@
 
 <body>
 <div class="page-overlay">
+
     <!-- NAV DESKTOP -->
     <nav class="main-nav">
         <div class="nav-inner">
-            <!-- Logo sinistra -->
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
 
-            <!-- Menu -->
             <div class="nav-menu">
                 <a href="index.html">Home Page</a>
                 <a href="menu.html">Le nostre prelibatezze</a>
@@ -29,7 +28,6 @@
                 <a href="contatti.html">Contatti</a>
             </div>
 
-            <!-- Logo destra -->
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
@@ -43,18 +41,13 @@
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
 
-            <div class="mobile-nav-title">Menu</div>
-
-            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
-                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
-            </a>
-
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
         </div>
+
         <div class="mobile-nav-menu" id="mobileMenu">
             <a href="index.html">Home Page</a>
             <a href="menu.html">Le nostre prelibatezze</a>
@@ -68,11 +61,12 @@
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <img src="stendardo.png" alt="Stendardo La Fontana del Borgo" class="hero-stendardo" />
             <img src="logo.png" alt="La Fontana del Borgo" class="hero-logo" />
         </div>
     </header>
 
-    <!-- CONTENUTO PRINCIPALE -->
+    <!-- CONTENUTO -->
     <main>
         <section class="gallery-box">
             <h2>Galleria</h2>
@@ -88,9 +82,9 @@
             </div>
 
             <div class="gallery-controls">
-                <button class="gallery-button" id="prevBtn">« Precedente</button>
-                <span class="gallery-counter" id="galleryCounter">1 / 3</span>
-                <button class="gallery-button" id="nextBtn">Successiva »</button>
+                <button class="gallery-button" id="prevBtn">«</button>
+                <span class="gallery-counter" id="galleryCounter">1 / 5</span>
+                <button class="gallery-button" id="nextBtn">»</button>
             </div>
         </section>
     </main>
@@ -144,12 +138,12 @@
 </div>
 
 <script>
-    const hamburgerBtn  = document.getElementById('hamburgerBtn');
-    const mobileMenu    = document.getElementById('mobileMenu');
-    const galleryImage  = document.getElementById('galleryImage');
-    const galleryCounter= document.getElementById('galleryCounter');
-    const prevBtn       = document.getElementById('prevBtn');
-    const nextBtn       = document.getElementById('nextBtn');
+    const hamburgerBtn   = document.getElementById('hamburgerBtn');
+    const mobileMenu     = document.getElementById('mobileMenu');
+    const galleryImage   = document.getElementById('galleryImage');
+    const galleryCounter = document.getElementById('galleryCounter');
+    const prevBtn        = document.getElementById('prevBtn');
+    const nextBtn        = document.getElementById('nextBtn');
 
     // Hamburger mobile
     hamburgerBtn?.addEventListener('click', function () {
@@ -161,12 +155,20 @@
     const images = [
         'box_img/foto1.jpg',
         'box_img/foto2.jpg',
-        'box_img/foto3.jpg'
+        'box_img/foto3.jpg',
+        'box_img/foto4.jpg',
+        'box_img/foto5.jpg'
     ];
 
     let currentIndex = 0;
 
     function updateGallery() {
+        // Reset e riavvio dell'animazione CSS
+        galleryImage.style.animation = 'none';
+        void galleryImage.offsetWidth; // forza reflow
+        galleryImage.style.animation = 'galleryFadeIn 1s ease-in forwards';
+
+        // Aggiorna immagine e contatore
         galleryImage.src  = images[currentIndex];
         galleryImage.alt  = 'La Fontana del Borgo - immagine ' + (currentIndex + 1);
         galleryCounter.textContent = (currentIndex + 1) + ' / ' + images.length;
@@ -182,6 +184,7 @@
         updateGallery();
     });
 
+    // Prima visualizzazione
     updateGallery();
 </script>
 </body>

@@ -2,10 +2,10 @@
 <html lang="it">
 <head>
     <meta charset="utf-8" />
-    <title>La Fontana del Borgo - Locanda Medioevale a Valsinni</title>
+    <title>La Fontana del Borgo - Locanda medioevale a Valsinni</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
-          content="La Fontana del Borgo è una locanda medioevale nel borgo antico di Valsinni. Cucina tipica valsinnese, atmosfera storica e accoglienza autentica ai piedi del castello dei Morra." />
+          content="La Fontana del Borgo è una locanda medioevale nel borgo antico di Valsinni. Cucina tipica valsinnese, ospitalità e atmosfera d'altri tempi ai piedi del castello di Isabella Morra." />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,7 +20,7 @@
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
 
-            <!-- Menu -->
+            <!-- Menu centrale -->
             <div class="nav-menu">
                 <a href="index.html" class="active">Home Page</a>
                 <a href="menu.html">Le nostre prelibatezze</a>
@@ -39,22 +39,19 @@
     <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
+            <!-- Logo stendardo a sinistra -->
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
 
-            <div class="mobile-nav-title">Menu</div>
-
-            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
-                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
-            </a>
-
+            <!-- Hamburger a destra -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
         </div>
+
         <div class="mobile-nav-menu" id="mobileMenu">
             <a href="index.html" class="active">Home Page</a>
             <a href="menu.html">Le nostre prelibatezze</a>
@@ -68,6 +65,7 @@
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <img src="stendardo.png" alt="Stendardo La Fontana del Borgo" class="hero-stendardo" />
             <img src="logo.png" alt="La Fontana del Borgo" class="hero-logo" />
         </div>
     </header>
@@ -77,12 +75,23 @@
         <section class="section-box">
             <h2>Benvenuti alla Fontana del Borgo</h2>
             <p>
-                Benvenuti alla Fontana del Borgo, locanda medioevale immersa nel fascino
-                del borgo antico di Favale, a due passi dal castello dei Morra.
+                Nella naturale location dell'antico borgo di Favale a due passi dal Castello dei Morra,
+                la locanda nasce dall'idea di ricreare una tradizione del 1400 anche nel luogo. piatti tipici della
+                tradizione Valsinnese dell'epoca, pasta fatta in casa, salumi e formaggi della nostra terra con la variante
+                anche della Pizzeria.
             </p>
             <p>
-                Qui potrai vivere un’esperienza che unisce tradizione culinaria, storia
-                e atmosfera unica, in un contesto che richiama le suggestioni del Quattrocento.
+                Che si tratti di una cena in famiglia, di un incontro tra amici o di una visita
+                alla scoperta dei luoghi di Isabella Morra, la locanda è pronta ad accoglierti.
+            </p>
+            <p>
+                <strong>Orari di apertura:</strong><br/>
+                12.00 - 14.30<br/>
+                20.00 - 23.00<br/>
+                Chiuso il lunedì
+            </p>
+            <p>
+                <u><strong>* Date le dimensioni ristrette del locale non sono ammessi animali e non è disponibile una cucina gluten-free senza rischio di contaminazioni.</strong></u>
             </p>
         </section>
     </main>
@@ -138,17 +147,10 @@
 <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu   = document.getElementById('mobileMenu');
-    const backToTopBtn = document.getElementById('backToTopBtn');
 
-    // Hamburger mobile
     hamburgerBtn?.addEventListener('click', function () {
         const isVisible = mobileMenu.style.display === 'flex';
         mobileMenu.style.display = isVisible ? 'none' : 'flex';
-    });
-
-    // Torna su (se riattivi il pulsante nel footer)
-    backToTopBtn?.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 </body>
