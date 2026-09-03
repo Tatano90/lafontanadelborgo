@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 <div class="page-overlay">
     <!-- NAV DESKTOP -->
@@ -18,34 +17,27 @@
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
-
             <div class="nav-menu">
                 <a href="index.html">Home Page</a>
                 <a href="menu.html">Le nostre prelibatezze</a>
                 <a href="galleria.html">Galleria</a>
+                <a href="dormire.html">Dormire</a>
                 <a href="chi-siamo.html">Chi Siamo</a>
                 <a href="contatti.html">Contatti</a>
             </div>
-
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
         </div>
     </nav>
-
     <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
+            <!-- Logo stendardo a sinistra -->
             <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
                 <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
             </a>
-
-            <div class="mobile-nav-title">Menu</div>
-
-            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
-                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
-            </a>
-
+            <!-- Hamburger a destra -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -56,23 +48,23 @@
             <a href="index.html">Home Page</a>
             <a href="menu.html">Le nostre prelibatezze</a>
             <a href="galleria.html">Galleria</a>
+            <a href="dormire.html">Dormire</a>
             <a href="chi-siamo.html">Chi Siamo</a>
             <a href="contatti.html">Contatti</a>
         </div>
     </nav>
-
     <!-- HERO -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <!-- <img src="stendardo.png" alt="Stendardo La Fontana del Borgo" class="hero-stendardo" /> -->
             <img src="logo.png" alt="La Fontana del Borgo" class="hero-logo" />
         </div>
     </header>
-
     <!-- CONTENUTO -->
     <main>
         <section class="section-box">
-            <h2>Pagina non trovata</h2>
+            <h1>Pagina non trovata</h1>
             <p>
                 La pagina che stai cercando non è disponibile o potrebbe essere stata spostata.
             </p>
@@ -82,12 +74,12 @@
             <p>
                 <a href="menu.html">Le nostre prelibatezze</a> ·
                 <a href="galleria.html">Galleria</a> ·
+                <a href="dormire.html">Dormire</a> ·
                 <a href="chi-siamo.html">Chi Siamo</a> ·
                 <a href="contatti.html">Contatti</a>
             </p>
         </section>
     </main>
-
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
@@ -97,33 +89,28 @@
                     Seguici sui nostri canali social.
                 </div>
             </div>
-
             <div class="footer-social">
                 <a href="https://www.facebook.com/p/La-Fontana-del-Borgo-100054309739099/?locale=it_IT"
                    target="_blank" rel="noopener noreferrer" aria-label="Facebook"
                    class="fb-link">
                     <img src="img/facebook.png" alt="Facebook" class="logo-fb" />
                 </a>
-
                 <a href="https://www.instagram.com/lafontanadelborgo/"
                    target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                    class="ig-link">
                     <img src="img/instagram.png" alt="Instagram" class="logo-ig" />
                 </a>
-
-                <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana_del_Borgo-Valsinni_Province_of_Matera_Basilicata.html"
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana-del-Borgo-Valsinni_Province_of_Matera_Basilicata.html"
                    target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"
                    class="ta-link">
                     <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta" />
                 </a>
-
                 <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4398056,17z/data=!3m2!4b1!5s0x0:0x0!4m6!3m5!1s0x13388e105d5811a7:0x9c93e6175a1fd3db!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11c55k0nj9"
                    target="_blank" rel="noopener noreferrer" aria-label="Maps"
                    class="gm-link">
                     <img src="img/maps.png" alt="Maps" class="logo-gm" />
                 </a>
             </div>
-
             <div class="footer-right">
                 Lingua:
                 <span style="font-weight: 600; text-decoration: underline;">IT</span>
@@ -135,11 +122,9 @@
         </div>
     </footer>
 </div>
-
 <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu   = document.getElementById('mobileMenu');
-
     hamburgerBtn?.addEventListener('click', function () {
         const isVisible = mobileMenu.style.display === 'flex';
         mobileMenu.style.display = isVisible ? 'none' : 'flex';
