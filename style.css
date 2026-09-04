@@ -641,12 +641,12 @@ main {
     }
 }
 
-/* ============================= */
-/* SEZIONE TEAM: MARIO E MODESTA */
-/* ============================= */
-
 .team-section {
-    /* usa lo stile base di .section-box; puoi aggiungere padding extra se vuoi */
+    background-color: var(--color-main-bg-soft);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--color-shadow-soft);
+    margin-bottom: 1.5rem;
 }
 .team-grid {
     display: flex;
