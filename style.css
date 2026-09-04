@@ -218,7 +218,7 @@ a:hover {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;  /* garantisce stendardo sopra, logo sotto, poi wordmark */
+    flex-direction: column;  /* stendardo sopra, logo sotto, poi wordmark */
     align-items: center;
     justify-content: center;
     min-height: 280px;
@@ -251,7 +251,7 @@ a:hover {
     font-family: 'Zapfino', cursive;
     font-size: clamp(28px, 4vw, 52px);
     font-weight: 400;
-    line-height: 1.05;
+    line-height: 1.1;           /* più spazio tra le righe in caso di a capo */
     letter-spacing: 0;
     color: var(--logo-ink);
     text-rendering: geometricPrecision;
@@ -367,8 +367,9 @@ main {
     color: var(--color-text-body);
 }
 .hero-guesthouse-text h1 {
-    font-family: 'Zapfino';
+    font-family: 'Zapfino', cursive;
     font-size: 1.8rem;
+    line-height: 1.3;        /* più margine tra le righe quando va a capo */
     margin-bottom: 0.8rem;
     color: var(--color-text-title);
 }
@@ -385,21 +386,6 @@ main {
     width: 100%;
     height: auto;
     display: block;
-}
-/* Responsive: su mobile immagine sopra, testo sotto */
-@media (max-width: 768px) {
-    .hero-guesthouse-inner {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .hero-guesthouse-image,
-    .hero-guesthouse-text {
-        flex: 1 1 100%;
-    }
-    .hero-guesthouse-overlay {
-        margin: 0.5rem;
-        padding: 0.4rem 0;
-    }
 }
 /* GALLERIA – STILE ALLINEATO */
 .gallery-box {
@@ -604,6 +590,41 @@ main {
     font-size: 0.85rem;
     text-align: right;
 }
+/* SEZIONE TEAM: MARIO E MODESTA */
+.team-section {
+    background-color: var(--color-main-bg-soft);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--color-shadow-soft);
+    margin-bottom: 1.5rem;
+}
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.team-card {
+    max-width: 220px;
+    text-align: center;
+}
+/* FOTO CON DIMENSIONI UGUALI */
+.team-photo {
+    width: 200px;              /* larghezza fissa uguale per entrambe */
+    height: 300px;             /* altezza fissa uguale per entrambe */
+    object-fit: cover;         /* riempie il riquadro, ritagliando se necessario */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px var(--color-shadow-soft);
+}
+.team-caption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-body-muted);
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero {
@@ -633,46 +654,37 @@ main {
     .gallery-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    /* TESTO HERO PIÙ CONTENUTO SU MOBILE */
+    .slide-title {
+        font-size: clamp(22px, 6vw, 32px);  /* riduco dimensione */
+        padding: 0 0.5rem;                  /* piccolo margine orizzontale */
+        line-height: 1.2;                   /* ancora più spazio tra le righe */
+    }
+    .slide-sub {
+        margin-left: 0;                     /* niente offset a destra */
+        font-size: clamp(14px, 4vw, 18px);
+        white-space: normal;                /* può andare a capo */
+        text-align: center;
+    }
+    /* Dormire: su mobile testo sopra, immagine sotto */
+    .hero-guesthouse-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-guesthouse-text {
+        order: 1;
+    }
+    .hero-guesthouse-image {
+        order: 2;
+    }
+    .hero-guesthouse-overlay {
+        margin: 0.5rem;
+        padding: 0.4rem 0;
+    }
 }
 @media (max-width: 480px) {
     /* Galleria griglia: 1 colonna su schermi piccoli */
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-}
-
-.team-section {
-    background-color: var(--color-main-bg-soft);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px var(--color-shadow-soft);
-    margin-bottom: 1.5rem;
-}
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.team-card {
-    max-width: 220px;
-    text-align: center;
-}
-/* FOTO CON DIMENSIONI UGUALI */
-.team-photo {
-    width: 200px;              /* larghezza fissa uguale per entrambe */
-    height: 300px;             /* altezza fissa uguale per entrambe */
-    object-fit: cover;         /* riempie il riquadro, ritagliando se necessario */
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;            /* centra l'immagine nella card */
-    box-shadow: 0 4px 12px var(--color-shadow-soft);
-}
-.team-caption {
-    margin-top: 0.5rem;
-    font-size: 0.95rem;
-    color: var(--color-text-body-muted);
-    font-family: 'Georgia', 'Times New Roman', serif;
 }
