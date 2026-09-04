@@ -27,11 +27,22 @@
     --color-shadow-soft: rgba(0, 0, 0, 0.4);
     --color-shadow-strong: rgba(0, 0, 0, 0.6);
     --color-shadow-hover: rgba(0, 0, 0, 0.7);
+    /* Colori per scritta Zapfino */
+    --logo-ink: #ffffff;
+    --logo-ink-soft: rgba(255, 255, 255, 0.85);
 }
 /* FONT LUMINARI */
 @font-face {
     font-family: 'Luminari';
-    src: url('luminari/Luminari-Regular.ttf') format('truetype');
+    src: url('font/luminari/Luminari-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* FONT ZAPFINO */
+@font-face {
+    font-family: 'Zapfino';
+    src: url('font/zapfino/Zapfino.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -187,11 +198,11 @@ a:hover {
     font-weight: 600;
     text-decoration: underline;
 }
-/* HERO CON STENDARDO SOPRA LOGO */
+/* HERO CON LOGO + SCRITTA GUESTHOUSE */
 .hero {
     position: relative;
     width: 100%;
-    min-height: 220px;
+    min-height: 280px;
     padding-top: 72px; /* spazio sotto la nav fissa */
 }
 .hero-overlay {
@@ -207,27 +218,75 @@ a:hover {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* garantisce stendardo sopra, logo sotto, poi wordmark */
     align-items: center;
     justify-content: center;
-    min-height: 220px;
+    min-height: 280px;
     text-align: center;
     padding: 1.5rem;
-    gap: 0.75rem; /* spazio tra stendardo e logo */
+    gap: 0.25rem; /* piccolo spazio tra stendardo e logo */
 }
-/* STENDARDO NELLA HERO – MODIFICABILE CENTRALMENTE */
+/* STENDARDO */
 .hero-stendardo {
     display: block;
-    max-width: 220px;   /* dimensione centrale: modifica solo qui */
+    max-width: 220px;
     width: 100%;
     height: auto;
 }
 /* LOGO SOTTO LO STENDARDO */
 .hero-logo {
     display: block;
-    max-width: 600px;
+    max-width: 520px;
     width: 100%;
     height: auto;
+}
+/* WORDMARK 'Il Pittore - Guesthouse' sotto il logo */
+.hero-wordmark {
+    margin-top: 5rem;
+    text-align: center;
+}
+/* LOGO / WORDMARK CON ZAPFINO */
+.slide-title {
+    margin: 0;
+    font-family: 'Zapfino', cursive;
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0;
+    color: var(--logo-ink);
+    text-rendering: geometricPrecision;
+    position: relative;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.slide-sub {
+    margin: 0;
+    margin-left: 300px;
+    font-family: 'Zapfino', cursive;
+    font-size: clamp(16px, 2.6vw, 20px);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    color: var(--logo-ink-soft);
+    white-space: nowrap;
+    line-height: 1.05;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.slide-underline {
+    width: clamp(100px, 14vw, 180px);
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.25) 20%,
+        rgba(255, 255, 255, 0.7) 50%,
+        rgba(255, 255, 255, 0.25) 80%,
+        transparent 100%
+    );
+    margin: 0.3rem auto 0;
+}
+.slide-title .wordmark {
+    display: inline-block;
+    transform: none;
 }
 /* LAYOUT CONTENUTO PRINCIPALE */
 main {
@@ -245,6 +304,7 @@ main {
         transform: translateY(0);
     }
 }
+/* BOX GENERICI */
 .section-box {
     background-color: var(--color-main-bg-soft);
     border-radius: 8px;
@@ -258,6 +318,90 @@ main {
 }
 .section-box p {
     margin-bottom: 0.8rem;
+}
+/* ============================= */
+/* SEZIONE GUESTHOUSE (Dormire)  */
+/* ============================= */
+
+.section-box.hero-guesthouse {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--color-shadow-soft);
+    margin-bottom: 1.5rem;
+}
+
+/* Contenitore generale della sezione, con bordo arrotondato e sfondo scuro */
+.hero-guesthouse-overlay {
+    position: relative;
+    border-radius: 8px;
+    margin: 0.75rem;                         /* piccolo margine ai bordi */
+    background-color: rgba(0, 0, 0, 0.75);   /* sfondo dietro immagine + testo */
+}
+/* Layout interno: immagine + testo affiancati */
+.hero-guesthouse-inner {
+    position: relative;
+    z-index: 1;
+    padding: 1.8rem 2.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+/* Wrapper immagine - la foto si vede tutta */
+.hero-guesthouse-image {
+    flex: 0 1 420px;      /* dimensione target dell'immagine */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hero-guesthouse-image img {
+    width: 100%;
+    height: auto;         /* mantiene le proporzioni originali */
+    object-fit: contain;  /* NON taglia nulla: immagine intera */
+    border-radius: 6px;
+}
+/* Colonna testo */
+.hero-guesthouse-text {
+    flex: 1 1 280px;
+    min-width: 260px;
+    color: var(--color-text-body);
+}
+.hero-guesthouse-text h1 {
+    font-family: 'Zapfino';
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-text-title);
+}
+.hero-guesthouse-text p {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    color: var(--color-text-body-muted);
+}
+/* Logo Booking nella pagina Dormire */
+.booking-logo {
+    max-width: 110px;   /* modifica qui per cambiare la dimensione */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Responsive: su mobile immagine sopra, testo sotto */
+@media (max-width: 768px) {
+    .hero-guesthouse-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-guesthouse-image,
+    .hero-guesthouse-text {
+        flex: 1 1 100%;
+    }
+    .hero-guesthouse-overlay {
+        margin: 0.5rem;
+        padding: 0.4rem 0;
+    }
 }
 /* GALLERIA – STILE ALLINEATO */
 .gallery-box {
@@ -396,6 +540,7 @@ main {
     background-color: var(--color-btn-hover-bg);
     opacity: 1;
 }
+/* FOOTER SOCIAL ICONS */
 .footer-social {
     display: flex;
     align-items: center;
@@ -445,15 +590,13 @@ main {
     width: 30px;
     height: 30px;
 }
-
-/* Logo Booking nella pagina Dormire */
+/* Logo Booking nella pagina Dormire (già usato sopra, ribadito per chiarezza) */
 .booking-logo {
-    max-width: 110px;   /* modifica qui per cambiare la dimensione */
+    max-width: 110px;
     width: 100%;
     height: auto;
     display: block;
 }
-
 .footer-social img:hover {
     transform: scale(1.08);
     filter: drop-shadow(0 2px 5px var(--color-shadow-hover));
@@ -466,7 +609,7 @@ main {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero {
-        min-height: 180px;
+        min-height: 220px;
     }
     .main-nav {
         display: none;
