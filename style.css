@@ -322,7 +322,6 @@ main {
 /* ============================= */
 /* SEZIONE GUESTHOUSE (Dormire)  */
 /* ============================= */
-
 .section-box.hero-guesthouse {
     background-color: rgba(0, 0, 0, 0.75);
     border-radius: 8px;
@@ -330,7 +329,6 @@ main {
     box-shadow: 0 4px 12px var(--color-shadow-soft);
     margin-bottom: 1.5rem;
 }
-
 /* Contenitore generale della sezione, con bordo arrotondato e sfondo scuro */
 .hero-guesthouse-overlay {
     position: relative;
@@ -641,4 +639,40 @@ main {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ============================= */
+/* SEZIONE TEAM: MARIO E MODESTA */
+/* ============================= */
+
+.team-section {
+    /* usa lo stile base di .section-box; puoi aggiungere padding extra se vuoi */
+}
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.team-card {
+    max-width: 220px;
+    text-align: center;
+}
+/* FOTO CON DIMENSIONI UGUALI */
+.team-photo {
+    width: 200px;              /* larghezza fissa uguale per entrambe */
+    height: 300px;             /* altezza fissa uguale per entrambe */
+    object-fit: cover;         /* riempie il riquadro, ritagliando se necessario */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;            /* centra l'immagine nella card */
+    box-shadow: 0 4px 12px var(--color-shadow-soft);
+}
+.team-caption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-body-muted);
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
