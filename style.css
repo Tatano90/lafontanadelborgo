@@ -30,6 +30,12 @@
     /* Colori per scritta Zapfino */
     --logo-ink: #ffffff;
     --logo-ink-soft: rgba(255, 255, 255, 0.85);
+    /* DIMENSIONI CUSTOM HERO WORDMARK – DESKTOP */
+    --hero-title-font-size-desktop: 40px;      /* Il Pittore (desktop) */
+    --hero-subtitle-font-size-desktop: 22px;   /* Guest-House (desktop) */
+    /* DIMENSIONI CUSTOM HERO WORDMARK – MOBILE */
+    --hero-title-font-size-mobile: 40px;       /* Il Pittore (mobile) */
+    --hero-subtitle-font-size-mobile: 18px;    /* Guest-House (mobile) */
 }
 /* FONT LUMINARI */
 @font-face {
@@ -245,13 +251,13 @@ a:hover {
     margin-top: 5rem;
     text-align: center;
 }
-/* LOGO / WORDMARK CON ZAPFINO */
+/* LOGO / WORDMARK CON ZAPFINO – DESKTOP */
 .slide-title {
     margin: 0;
     font-family: 'Zapfino', cursive;
-    font-size: clamp(28px, 4vw, 52px);
+    font-size: var(--hero-title-font-size-desktop);
     font-weight: 400;
-    line-height: 1.1;           /* più spazio tra le righe in caso di a capo */
+    line-height: 1.1;
     letter-spacing: 0;
     color: var(--logo-ink);
     text-rendering: geometricPrecision;
@@ -262,7 +268,7 @@ a:hover {
     margin: 0;
     margin-left: 300px;
     font-family: 'Zapfino', cursive;
-    font-size: clamp(16px, 2.6vw, 20px);
+    font-size: var(--hero-subtitle-font-size-desktop);
     font-weight: 400;
     letter-spacing: 0.01em;
     text-transform: none;
@@ -369,7 +375,7 @@ main {
 .hero-guesthouse-text h1 {
     font-family: 'Zapfino', cursive;
     font-size: 1.8rem;
-    line-height: 1.3;        /* più margine tra le righe quando va a capo */
+    line-height: 1.3;
     margin-bottom: 0.8rem;
     color: var(--color-text-title);
 }
@@ -382,7 +388,7 @@ main {
 }
 /* Logo Booking nella pagina Dormire */
 .booking-logo {
-    max-width: 110px;   /* modifica qui per cambiare la dimensione */
+    max-width: 110px;
     width: 100%;
     height: auto;
     display: block;
@@ -654,16 +660,16 @@ main {
     .gallery-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    /* TESTO HERO PIÙ CONTENUTO SU MOBILE */
+    /* HERO – VERSIONE MOBILE: usa dimensioni dedicate e sistema la scritta */
     .slide-title {
-        font-size: clamp(22px, 6vw, 32px);  /* riduco dimensione */
-        padding: 0 0.5rem;                  /* piccolo margine orizzontale */
-        line-height: 1.2;                   /* ancora più spazio tra le righe */
+        font-size: var(--hero-title-font-size-mobile);
+        padding: 0 0.5rem;
+        line-height: 1.2;
     }
     .slide-sub {
-        margin-left: 0;                     /* niente offset a destra */
-        font-size: clamp(14px, 4vw, 18px);
-        white-space: normal;                /* può andare a capo */
+        margin-left: 0;
+        font-size: var(--hero-subtitle-font-size-mobile);
+        white-space: normal;
         text-align: center;
     }
     /* Dormire: su mobile testo sopra, immagine sotto */
