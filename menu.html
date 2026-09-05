@@ -1,24 +1,21 @@
 <!doctype html>
 <html lang="it">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>La Fontana del Borgo - Cucina tipica valsinnese</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="Le prelibatezze della Fontana del Borgo: piatti tipici della tradizione valsinnese, pasta fatta in casa, salumi e formaggi locali, specialità come U’RRAGON." />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+          content="Le prelibatezze della Fontana del Borgo: piatti tipici della tradizione valsinnese, pasta fatta in casa, salumi e formaggi locali, specialità come U’RRAGON.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <div class="page-overlay">
-    <!-- NAV DESKTOP -->
     <nav class="main-nav">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
-                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            <a href="index.html" class="nav-logo-link" aria-label="Home">
+                <img src="img/stendardo.png" alt="La Fontana del Borgo" class="nav-logo">
             </a>
-
             <div class="nav-menu">
                 <a href="index.html">Home Page</a>
                 <a href="menu.html" class="active">Le nostre prelibatezze</a>
@@ -27,27 +24,22 @@
                 <a href="chi-siamo.html">Chi Siamo</a>
                 <a href="contatti.html">Contatti</a>
             </div>
-
-            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
-                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            <a href="index.html" class="nav-logo-link" aria-label="Home">
+                <img src="img/stendardo.png" alt="La Fontana del Borgo" class="nav-logo">
             </a>
         </div>
     </nav>
-
-    <!-- NAV MOBILE -->
     <nav class="mobile-nav">
         <div class="mobile-nav-header">
-            <a href="index.html" class="nav-logo-link" aria-label="La Fontana del Borgo - Home">
-                <img src="stendardo.png" alt="La Fontana del Borgo" class="nav-logo" />
+            <a href="index.html" class="nav-logo-link" aria-label="Home">
+                <img src="img/stendardo.png" alt="La Fontana del Borgo" class="nav-logo">
             </a>
-
             <button class="hamburger" id="hamburgerBtn" aria-label="Apri/chiudi menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
         </div>
-
         <div class="mobile-nav-menu" id="mobileMenu">
             <a href="index.html">Home Page</a>
             <a href="menu.html" class="active">Le nostre prelibatezze</a>
@@ -57,17 +49,12 @@
             <a href="contatti.html">Contatti</a>
         </div>
     </nav>
-
-    <!-- HERO -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <!-- <img src="stendardo.png" alt="Stendardo La Fontana del Borgo" class="hero-stendardo" /> -->
-            <img src="logo.png" alt="La Fontana del Borgo" class="hero-logo" />
+            <img src="img/logo.png" alt="La Fontana del Borgo" class="hero-logo">
         </div>
     </header>
-
-    <!-- CONTENUTO -->
     <main>
         <section class="section-box">
             <h1>Le nostre prelibatezze</h1>
@@ -83,18 +70,16 @@
                 Tra le specialità spicca “U’RRAGON”, piatto simbolo della locanda, che racconta una
                 storia antica fatta di rituali, convivialità e sapori di montagna.
             </p>
-
             <p style="margin-top:1rem;">
                 <a href="docs/LaFontanaDelBorgo_Menu.pdf" target="_blank" rel="noopener noreferrer"
                    style="display:inline-flex; align-items:center; gap:0.4rem;">
                     <img src="img/pdf-icon.png"
                          alt="Scarica il menu in PDF"
-                         style="width:22px; height:22px; display:block;" />
+                         style="width:22px; height:22px; display:block;">
                     <span>Scarica il menu in PDF</span>
                 </a>
             </p>
         </section>
-
         <section class="section-box" style="margin-top:3rem;">
             <h1>Novità</h1>
             <h2>“UR'RAGONE”</h2>
@@ -104,67 +89,94 @@
                 Alla fine del pranzo allo sposo è stata regalata la “coscia della sposa”, una coscia intera di
                 agnello steccata e cucinata a fuoco lento, spesso solo con il riverbero del mattone.
                 In seguito con la scoperta del pomodoro venne trasformata in ragoùt (ragone da zita).
-                Lo ius primae noctis consumato dal notabile veniva così ripagata dall'addentare,
+                Lo ius primae noctis consumato dal notabile veniva così ripagato dall'addentare,
                 da parte dello sposo una splendida coscia farcita con alloro e pepe.
-                Qualcuno malignando mi dice: “conoscendo le bellezze delle contadine di quel periodo e
+                Qualcuno malignando mi dice:
+                “conoscendo le bellezze delle contadine di quel periodo e
                 immaginando il profumo di quella carne allevata a spezie d'alta montagna…non sa cosa si perdeva il Conte…”
             </p>
         </section>
+        <!-- NUOVA SEZIONE: GRIGLIA FOTO CIBO CON COLORI SECTION-BOX -->
+        <section class="section-box">
+            <h2>Scorci dalla nostra cucina</h2>
+            <p style="margin-bottom: 1rem;">
+                Alcuni piatti e dettagli che potrai trovare presso la nostra locanda.
+            </p>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo1.jpg" alt="Piatti della Fontana del Borgo - foto 1">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo2.jpg" alt="Piatti della Fontana del Borgo - foto 2">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo3.jpg" alt="Piatti della Fontana del Borgo - foto 3">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo4.jpg" alt="Piatti della Fontana del Borgo - foto 4">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo5.jpg" alt="Piatti della Fontana del Borgo - foto 5">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo6.jpg" alt="Piatti della Fontana del Borgo - foto 6">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo7.jpg" alt="Piatti della Fontana del Borgo - foto 7">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo8.jpg" alt="Piatti della Fontana del Borgo - foto 8">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo9.jpg" alt="Piatti della Fontana del Borgo - foto 9">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo10.jpg" alt="Piatti della Fontana del Borgo - foto 10">
+                </figure>
+                <figure class="gallery-item">
+                    <img src="cibo_img/cibo11.jpg" alt="Piatti della Fontana del Borgo - foto 11">
+                </figure>
+            </div>
+        </section>
     </main>
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-left">
                 <div class="footer-text">
-                    © La Fontana del Borgo – Locanda Medioevale.
-                    Seguici sui nostri canali social.
+                    © La Fontana del Borgo – Locanda Medioevale. Seguici sui nostri canali social.
                 </div>
             </div>
-
             <div class="footer-social">
                 <a href="https://www.facebook.com/p/La-Fontana-del-Borgo-100054309739099/?locale=it_IT"
-                   target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                   class="fb-link">
-                    <img src="img/facebook.png" alt="Facebook" class="logo-fb" />
+                   target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="fb-link">
+                    <img src="img/facebook.png" alt="Facebook" class="logo-fb">
                 </a>
-
                 <a href="https://www.instagram.com/lafontanadelborgo/"
-                   target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-                   class="ig-link">
-                    <img src="img/instagram.png" alt="Instagram" class="logo-ig" />
+                   target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="ig-link">
+                    <img src="img/instagram.png" alt="Instagram" class="logo-ig">
                 </a>
-
                 <a href="https://www.tripadvisor.it/Restaurant_Review-g1490951-d9842403-Reviews-La_Fontana-del-Borgo-Valsinni_Province_of_Matera_Basilicata.html"
-                   target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"
-                   class="ta-link">
-                    <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta" />
+                   target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor" class="ta-link">
+                    <img src="img/tripadvisor.png" alt="TripAdvisor" class="logo-ta">
                 </a>
-
-                <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/@40.1679538,16.4405598,17z/data=!3m2!4b1!5s0x1338abf78bcfcb6d:0x733f3f5e9135fc8!4m6!3m5!1s0x1338abf9d2ed18af:0x71ab57ed6f5b4cb0!8m2!3d40.1679538!4d16.4423805!16s%2Fg%2F11cjpfd_20?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D"
-                   target="_blank" rel="noopener noreferrer" aria-label="Maps"
-                   class="gm-link">
-                    <img src="img/maps.png" alt="Maps" class="logo-gm" />
+                <a href="https://www.google.com/maps/place/La+Fontana+del+Borgo/"
+                   target="_blank" rel="noopener noreferrer" aria-label="Maps" class="gm-link">
+                    <img src="img/maps.png" alt="Maps" class="logo-gm">
                 </a>
             </div>
-
             <div class="footer-right">
                 Lingua:
                 <span style="font-weight: 600; text-decoration: underline;">IT</span>
                 <span> | </span>
-                <a href="#" aria-disabled="true" style="opacity: 0.7; pointer-events: none;">
-                    EN (coming soon)
-                </a>
+                <span style="opacity: 0.7;">EN (coming soon)</span>
             </div>
         </div>
     </footer>
 </div>
-
 <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu   = document.getElementById('mobileMenu');
-
-    hamburgerBtn?.addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburgerBtn?.addEventListener('click', () => {
         const isVisible = mobileMenu.style.display === 'flex';
         mobileMenu.style.display = isVisible ? 'none' : 'flex';
     });
