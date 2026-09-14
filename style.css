@@ -358,7 +358,7 @@ main {
     height: auto;
     display: block;
 }
-/* Galleria griglia (Dormire) */
+/* Galleria griglia generica (Dormire, cucina, Spazi, ecc.) */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -390,38 +390,37 @@ main {
         transform: scale(1);
     }
 }
-/* Box galleria pagina dedicata */
+/* Box galleria pagina dedicata (Spazi) */
 .gallery-box {
     background-color: var(--color-main-bg-soft); /* STESSO COLORE DI section-box */
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px var(--color-shadow-soft);
     margin-bottom: 1.5rem;
-    /* Altezza controllata per stare nello schermo */
     max-height: calc(100vh - 220px);
     display: flex;
     flex-direction: column;
 }
-/* Area viewer con altezza fissa */
+/* Area viewer (eventuale uso in altre pagine) */
 .gallery-viewer {
     background-color: var(--color-gallery-bg);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px var(--color-shadow-soft);
     margin-bottom: 1rem;
-    height: 380px;               /* altezza riquadro immagini desktop */
+    height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/* Immagine che si adatta al box (senza crop) */
+/* Immagine che si adatta al box (viewer) */
 .gallery-image {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;         /* immagine intera nel box */
+    object-fit: contain;
 }
-/* Controlli galleria */
+/* Controlli galleria (viewer) */
 .gallery-controls {
     display: flex;
     align-items: center;
@@ -495,14 +494,13 @@ main {
 /* Link Maps in sezione Contatti: icona + testo centrati */
 .gm-link-inline {
     display: inline-flex;
-    align-items: center;      /* centra verticalmente icona e testo */
-    justify-content: center;  /* centra il contenuto nel link */
+    align-items: center;
+    justify-content: center;
     gap: 0.4rem;
 }
 .gm-link-text {
     display: inline-block;
 }
-
 .footer-social a {
     display: inline-flex;
     align-items: center;
